@@ -1,0 +1,5 @@
+note: *args stores tuple of (arg1, arg2, ...)
+	**kwds stores dictionaries of {keys: values, ...}
+	decorator
+	yeild and send
+	iteration and iterable
