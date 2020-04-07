@@ -1,0 +1,11 @@
+assignment1
+note: *args stores tuple of (arg1, arg2, ...)
+	**kwds stores dictionaries of {keys: values, ...}
+	decorator
+	yeild and send
+	iteration and iterable
+reply:
+For problem 2, you can use np,where(), which will return the index number that you need.
+For problem 3, the intention for this problem is review on your indexing and numpy skills, manually look for the overlap column will be fine. You can also create a simple function to loop over the columns to check the overlapped column.
+For problem 4,  If you are familiar with linear algebra, there is a simple way to rotate the image counterclockwise, which is using the concept of transpose. 
+In fact, to rotate the image 90 degree counterclockwise, you will need more than just transpose. Since the transpose function swaps your row into columns. To rotate the image 90 degree counterclockwise, you may want to flip the matrix, using flipud(). (Note: when you do transpose, since the color image has RGB value, it is a 3 dimensional matrix, you will need to set the transpose function to only sway X and Y axis for each RGB layer. 
