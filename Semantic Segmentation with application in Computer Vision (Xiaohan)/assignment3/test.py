@@ -1,6 +1,9 @@
+# test.py
 import numpy as np
 from imageio import imread
+import matplotlib.pyplot as plt
 from cv2 import cv2
+#Function
 
 def PepperandSalt(img,percetage):
     NoiseImg=img.copy()
@@ -14,12 +17,24 @@ def PepperandSalt(img,percetage):
             NoiseImg[randX,randY]=255          
     return NoiseImg
 
-m, n = 1,1
+#Import image here
+# Sample call
+# castle.png
+m, n = 3,3
 img = imread('castle.png')
 im = PepperandSalt(img, 0.1)
+# imclose = inclosing(im, m, n)
+# imopen = imopening(im, m, n)
 
 kernel = np.ones((m, n), np.uint8)
 imopen = cv2.morphologyEx(im, cv2.MORPH_OPEN, kernel)
-cv2.imshow("open",imopen)
 imclose = cv2.morphologyEx(im, cv2.MORPH_CLOSE, kernel)
-cv2.imshow("close",imclose)
+# cv2.imshow("open",imopen)
+# cv2.imshow("close",imclose)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+plt.figure()
+plt.imshow(imopen, cmap='gray')
+plt.figure()
+plt.imshow(imclose, cmap='gray')
+plt.show()
